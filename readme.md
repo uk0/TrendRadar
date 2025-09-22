@@ -9,12 +9,13 @@
 [![GitHub Stars](https://img.shields.io/github/stars/sansan0/TrendRadar?style=flat-square&logo=github&color=yellow)](https://github.com/sansan0/TrendRadar/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/sansan0/TrendRadar?style=flat-square&logo=github&color=blue)](https://github.com/sansan0/TrendRadar/network/members)
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v2.2.0-green.svg?style=flat-square)](https://github.com/sansan0/TrendRadar)
+[![Version](https://img.shields.io/badge/version-v2.3.1-green.svg?style=flat-square)](https://github.com/sansan0/TrendRadar)
 
-[![企业微信通知](https://img.shields.io/badge/企业微信-通知支持-00D4AA?style=flat-square)](https://work.weixin.qq.com/)
-[![Telegram通知](https://img.shields.io/badge/Telegram-通知支持-00D4AA?style=flat-square)](https://telegram.org/)
-[![dingtalk通知](https://img.shields.io/badge/钉钉-通知支持-00D4AA?style=flat-square)](#)
-[![飞书通知](https://img.shields.io/badge/飞书-通知支持-00D4AA?style=flat-square)](https://www.feishu.cn/)
+[![企业微信通知](https://img.shields.io/badge/企业微信-通知-00D4AA?style=flat-square)](https://work.weixin.qq.com/)
+[![Telegram通知](https://img.shields.io/badge/Telegram-通知-00D4AA?style=flat-square)](https://telegram.org/)
+[![dingtalk通知](https://img.shields.io/badge/钉钉-通知-00D4AA?style=flat-square)](#)
+[![飞书通知](https://img.shields.io/badge/飞书-通知-00D4AA?style=flat-square)](https://www.feishu.cn/)
+[![邮件通知](https://img.shields.io/badge/Email-通知-00D4AA?style=flat-square)](mailto:) 
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-自动化-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/sansan0/TrendRadar)
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-部署-4285F4?style=flat-square&logo=github&logoColor=white)](https://sansan0.github.io/TrendRadar)
 [![Docker](https://img.shields.io/badge/Docker-部署-2496ED?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/)
@@ -29,7 +30,7 @@
 - 遇到问题可选择以上 2 种方式获得帮助，[点此跳转到两者的区别](#问题答疑与1元点赞)
 
 <details>
-<summary>👉 点击查看<strong>致谢名单</strong> (当前 <strong>🔥22🔥</strong> 位)</summary>
+<summary>👉 点击查看<strong>致谢名单</strong> (当前 <strong>🔥23🔥</strong> 位)</summary>
 
 ### 数据支持
 
@@ -49,6 +50,7 @@
 
 |           点赞人            |  金额  |  日期  |             备注             |
 | :-------------------------: | :----: | :----: | :-----------------------: |
+|           *🍍           |  10  | 2025.9.21  |           |
 |           E*f           |  1  | 2025.9.20  |           |
 |           *记            |  1  | 2025.9.20  |           |
 |           z*u            |  2  | 2025.9.19  |           |
@@ -186,7 +188,11 @@ weight:
 
 ### **多渠道实时推送**
 
-支持**企业微信**(微信方案)、**飞书**、**钉钉**、**Telegram**，消息直达手机
+支持**企业微信**(+ 微信推送方案)、**飞书**、**钉钉**、**Telegram**、**邮件**，消息直达手机和邮箱
+
+- **邮件推送**：支持 QQ邮箱、Gmail、Outlook、163邮箱等主流邮箱服务
+- **智能识别**：自动识别邮箱服务商，也可以手动配置 SMTP 服务器
+- **HTML 格式**：精美的 HTML 邮件格式，与网页版效果一致
 
 ### **多端适配**
 - **GitHub Pages**：自动生成精美网页报告，PC/移动端适配
@@ -212,7 +218,7 @@ GitHub 一键 Fork 即可使用，无需编程基础。
 **典型场景：** 股市投资监控、品牌舆情追踪、行业动态关注、生活资讯获取
 
 
-| Github Pages 网页效果(手机端适配) | 飞书推送效果 |
+| Github Pages 效果(手机端适配、邮箱推送效果) | 飞书推送效果 |
 |:---:|:---:|
 | ![Github Pages效果](_image/github-pages.png) | ![飞书推送效果](_image/feishu.jpg) |
 
@@ -290,6 +296,28 @@ GitHub 一键 Fork 即可使用，无需编程基础。
 > 
 > 下一次**新功能**，大概会是 ai 分析功能(●'◡'●)
 
+### 2025/09/22 - v2.3.1
+
+- **新增邮件推送功能**，支持将热点新闻报告发送到邮箱
+- **智能 SMTP 识别**：自动识别 Gmail、QQ邮箱、Outlook、网易邮箱等 10+ 种邮箱服务商配置
+- **HTML 精美格式**：邮件内容采用与网页版相同的 HTML 格式，排版精美，移动端适配
+- **批量发送支持**：支持多个收件人，用逗号分隔即可同时发送给多人
+- **自定义 SMTP**：可自定义 SMTP 服务器和端口
+
+**使用说明**：
+- 适用场景：适合需要邮件归档、团队分享、定时报告的用户
+- 注意事项：为防止邮件群发功能被**滥用**，当前的群发是所有收件人都能看到彼此的邮箱地址，适合熟人间交流资讯
+
+**支持的邮箱服务**：
+- Gmail、QQ邮箱、Outlook/Hotmail、163/126邮箱、新浪邮箱、搜狐邮箱等
+
+**更新提示**：
+- 此次更新的内容比较多，建议删除原有 fork, 重新 fork 并配置
+
+
+<details>
+<summary><strong>👉 历史更新</strong></summary>
+
 ### 2025/09/17 - v2.2.0
 
 - 新增一键保存新闻图片功能，让你轻松分享关注的热点
@@ -299,9 +327,6 @@ GitHub 一键 Fork 即可使用，无需编程基础。
 - 使用方法：用手机或电脑打开该网页链接，点击页面顶部的"保存为图片"按钮
 - 实际效果：系统会自动将当前的新闻报告制作成一张精美图片，保存到你的手机相册或电脑桌面
 - 分享便利：你可以直接把这张图片发给朋友、发到朋友圈，或分享到工作群，让别人也能看到你发现的重要资讯
-
-<details>
-<summary><strong>👉 历史更新</strong></summary>
 
 ### 2025/09/13 - v2.1.2
 
@@ -581,6 +606,49 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
       - `TELEGRAM_CHAT_ID`：填入第 2 步获得的 Chat ID
    </details>
 
+   <details>
+   <summary> <strong>👉 邮件推送</strong>（支持所有主流邮箱）</summary>
+   <br>
+
+   - 注意事项：为防止邮件群发功能被**滥用**，当前的群发是所有收件人都能看到彼此的邮箱地址，适合熟人间交流资讯。
+   - 仅供参考：请根据实际情况调整，邮箱方面并没有一一验证，是按照 SMTP 的标准配置的 
+
+   **GitHub Secret 配置：**
+   - 名称：`EMAIL_FROM` - 发件人邮箱地址
+   - 名称：`EMAIL_PASSWORD` - 邮箱密码或授权码
+   - 名称：`EMAIL_TO` - 收件人邮箱地址（多个收件人用英文逗号分隔）
+   - 名称：`EMAIL_SMTP_SERVER` - SMTP服务器地址（可选，留空则自动识别）
+   - 名称：`EMAIL_SMTP_PORT` - SMTP端口（可选，留空则自动识别）
+
+   **常见邮箱设置：**
+
+   #### QQ邮箱：
+   1. 登录 QQ邮箱网页版 → 设置 → 账户
+   2. 开启 POP3/SMTP 服务
+   3. 生成授权码（16位字母）
+   4. `EMAIL_PASSWORD` 填写授权码，而非 QQ 密码
+
+   #### Gmail：
+   1. 开启两步验证
+   2. 生成应用专用密码
+   3. `EMAIL_PASSWORD` 填写应用专用密码
+
+   #### 163/126邮箱：
+   1. 登录网页版 → 设置 → POP3/SMTP/IMAP
+   2. 开启 SMTP 服务
+   3. 设置客户端授权码
+   4. `EMAIL_PASSWORD` 填写授权码
+
+   **高级配置**：
+   如果自动识别失败，可手动配置 SMTP：
+   - `EMAIL_SMTP_SERVER`：如 smtp.gmail.com
+   - `EMAIL_SMTP_PORT`：如 587（TLS）或 465（SSL）
+
+   **多收件人设置**：
+   - EMAIL_TO="user1@example.com,user2@example.com,user3@example.com"
+
+   </details>
+
 3. **主要配置**:
 
     - **推送设置：** : 在 [config/config.yaml](config/config.yaml) 中进行，可根据里面的描述文字操作，这里不重复了
@@ -765,7 +833,7 @@ docker run -d --name trend-radar \
   -e IMMEDIATE_RUN="true" \
   wantcat/trendradar:latest
 
-# 或者启用手机应用推送通知
+# 或者启用手机应用推送通知或邮件通知
 docker run -d --name trend-radar \
   -v ./config:/app/config:ro \
   -v ./output:/app/output \
@@ -774,6 +842,9 @@ docker run -d --name trend-radar \
   -e WEWORK_WEBHOOK_URL="你的企业微信webhook" \
   -e TELEGRAM_BOT_TOKEN="你的telegram_bot_token" \
   -e TELEGRAM_CHAT_ID="你的telegram_chat_id" \
+  -e EMAIL_FROM="你的发件邮箱" \
+  -e EMAIL_PASSWORD="你的邮箱密码或授权码" \
+  -e EMAIL_TO="收件人邮箱" \
   -e CRON_SCHEDULE="*/30 * * * *" \
   -e RUN_MODE="cron" \
   -e IMMEDIATE_RUN="true" \
@@ -946,21 +1017,14 @@ docker exec -it trend-radar ls -la /app/config/
 
 > 心意到就行，收到的**点赞**用于提高开发者开源的积极性。你们的**点赞**已记录于最顶部的【致谢名单】
 
-<div align="center">
-
 |公众号关注 |微信点赞 | 支付宝点赞 |
 |:---:|:---:|:---:| 
 | <img src="_image/weixin.png" width="300" title="硅基茶水间"/> | <img src="https://cdn-1258574687.cos.ap-shanghai.myqcloud.com/img/%2F2025%2F07%2F17%2F2ae0a88d98079f7e876c2b4dc85233c6-9e8025.JPG" width="300" title="微信支付"/> | <img src="https://cdn-1258574687.cos.ap-shanghai.myqcloud.com/img/%2F2025%2F07%2F17%2Fed4f20ab8e35be51f8e84c94e6e239b4-fe4947.JPG" width="300" title="支付宝支付"/> |
 
-</div>
-
-
-| 答疑方式 | 适用场景 | 响应时间 | 详细程度 | 如何提问 |
-|---------|---------|---------|---------|---------|
-| **GitHub Issues** | 部署配置问题<br/>功能异常 | 1-2天内 | 针对性强 | 📋 **提供完整信息**：<br/>• 尽量截图<br/>• 错误日志<br/>• 系统环境等等 |
-| **公众号留言** | 快速咨询<br/>使用疑问<br/>功能了解 | 几小时 | 简要指导 | 💡 **抓住问题核心**：<br/>• 一句话描述问题<br/>• 说明想要的效果 |
-
-
+| 答疑方式 | 适用场景 | 响应时间 | 详细程度 | 社区参与度 | 如何提问 |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **GitHub Issues** | 部署配置问题<br/>功能异常 | 1-2天内 | 针对性强 | **公开讨论**<br/>其他用户可参与<br/>问题记录可搜索 | 📋 **提供完整信息**：<br/>• 尽量截图<br/>• 错误日志<br/>• 系统环境等等 |
+| **公众号交流** | 快速咨询<br/>使用疑问<br/>功能了解 | 几小时 | 简要指导 | 可以文章下留言<br/>也可以私信交流 | 💡 **抓住问题核心**：<br/>• 一句话描述问题<br/>• 说明想要的效果 |
 
 ### 项目相关
 
